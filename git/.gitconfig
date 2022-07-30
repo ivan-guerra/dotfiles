@@ -1,0 +1,7 @@
+[user]
+	name = ivan-guerra
+	email = ivan.eduardo.guerra@gmail.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = master

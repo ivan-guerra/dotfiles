@@ -17,26 +17,26 @@ order += "battery 1"
 order += "tztime local"
 
 load {
-    format = "<span background='#f59335'>   %5min Load </span>"
+    format = "<span background='#f59335'>   <b>%5min Load</b> </span>"
 }
 
 cpu_temperature 0 {
-    format = "<span background='#bf616a'>   %degrees °C </span>"
+    format = "<span background='#bf616a'>   <b>%degrees °C</b> </span>"
     path   = "/sys/class/thermal/thermal_zone0/temp"
 }
 
 disk "/home" {
-    format = "<span background='#a1d569'>   %free Free </span>"
+    format = "<span background='#a1d569'>   <b>%free Free</b> </span>"
 }
 
 wireless wlp1s0 {
-    format_up   = "<span background='#b48ead'>   %essid (<i>%bitrate</i>)</span>"
-    format_down = "<span background='#b48ead'>   Disconnected </span>"
+    format_up   = "<span background='#b48ead'>   <b>%essid (<i>%bitrate</i>)</b> </span>"
+    format_down = "<span background='#b48ead'>   <b>Disconnected</b> </span>"
 }
 
 volume master {
-    format       = "<span background='#ebcb8b'>   %volume </span>"
-    format_muted = "<span background='#ebcb8b'>   Muted </span>"
+    format       = "<span background='#ebcb8b'>   <b>%volume</b> </span>"
+    format_muted = "<span background='#ebcb8b'>   <b>Muted</b> </span>"
     device       = "default"
     mixer        = "Master"
     mixer_idx    = 0
@@ -44,7 +44,7 @@ volume master {
 
 battery 1 {
     last_full_capacity = true
-    format             = "<span background='#a3be8c'>   %status %percentage </span>"
+    format             = "<span background='#a3be8c'>   <b>%status %percentage</b> </span>"
     format_down        = "No Battery"
     status_chr         = "Charging"
     status_bat         = "Battery"
@@ -55,5 +55,5 @@ battery 1 {
 }
 
 tztime local {
-    format      = "<span background='#81a1c1'>   %a %-d %b %I:%M</span>"
+    format      = "<span background='#81a1c1'>   <b>%a %-d %b %I:%M</b> </span>"
 }

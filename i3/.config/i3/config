@@ -1,164 +1,128 @@
-# Basic settings
-set $mod Mod4
-floating_modifier $mod
-hide_edge_borders both
+# Credit to https://github.com/addy-dclxvi/i3-starterpack for providing many
+# of the configurations used here.
 
-# Programs executed on startup.
-exec_always compton --backend glx -cC
-exec_always feh --bg-scale /home/ieg/pictures/wave.png
+# Set modifier.
+set $super Mod4
+set $alt   Mod1
+
+# Set font.
+font pango: Noto Sans 11
+
+# Use Mouse+$super to drag floating windows to their wanted position.
+floating_modifier $super
+
+# Autostart.
+exec --no-startup-id feh --bg-scale /home/ieg/pictures/wave.png
+exec --no-startup-id xsettingsd &
+exec --no-startup-id compton --backend glx -cC
 
 # Machine state controls.
-bindsym $mod+F4 exec systemctl poweroff
-bindsym $mod+F5 exec systemctl reboot
-bindsym $mod+F6 exec systemctl suspend -i
+bindsym $super+F4 exec systemctl poweroff
+bindsym $super+F5 exec systemctl reboot
+bindsym $super+F6 exec systemctl suspend -i
 
-# Volume controls.
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym $mod+Up exec pactl set-sink-volume 0 +5%
-bindsym $mod+Down exec pactl set-sink-volume 0 -5%
+# Common apps keybinds.
+bindsym $super+d      exec dmenu_run
+bindsym $super+Return exec i3-sensible-terminal
+bindsym $super+z      exec "slock"
+bindsym $super+b      exec google-chrome
 
-# Screen brightness controls.
-bindsym XF86MonBrightnessUp exec xbacklight +10
-bindsym XF86MonBrightnessDown exec xbacklight -10
+# Change volume.
+bindsym $super+$alt+Up   exec pactl set-sink-volume 0 +5%
+bindsym $super+$alt+Down exec pactl set-sink-volume 0 -5%
 
-# i3 configuration controls.
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes' 'i3-msg exit'"
+# Kill focused window.
+bindsym $super+c kill
 
-# Application launch shortcuts.
-bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+d exec dmenu_run
-bindsym $mod+b exec google-chrome
-bindsym --release $mod+z exec "slock"
+# Change focus.
+bindsym $super+Left  focus left
+bindsym $super+Down  focus down
+bindsym $super+Up    focus up
+bindsym $super+Right focus right
 
-# Window focus controls.
-bindsym $mod+Shift+q kill
-bindsym $mod+j focus left
-bindsym $mod+semicolon focus right
-bindsym $mod+l focus up
-bindsym $mod+k focus down
-bindsym $mod+a focus parent
+# Move focused window.
+bindsym $super+Shift+Left  move left
+bindsym $super+Shift+Down  move down
+bindsym $super+Shift+Up    move up
+bindsym $super+Shift+Right move right
 
-# Focused window movement controls (using arrow keys).
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Down move down
+# Split in horizontal orientation.
+bindsym $super+h split h
 
-# Screen mode controls.
-bindsym $mod+h split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
+# Split in vertical orientation.
+bindsym $super+v split v
 
-# Change container layout (stacked, tabbed, toggle split).
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# Enter fullscreen mode for the focused container.
+bindsym $super+f fullscreen toggle
 
-# Floating window controls.
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+# Change container layout split.
+bindsym $super+s layout toggle split
 
-# Workspace controls.
-bindsym $mod+Left workspace prev_on_output
-bindsym $mod+Right workspace next_on_output
+# Toggle tiling / floating.
+bindsym $super+space floating toggle
+
+# Change focus between tiling / floating windows.
+bindsym $super+Shift+space focus mode_toggle
 
 # Switch to workspace.
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# Switch to workspace using numpad.
-bindsym $mod+mod2+KP_1 workspace 1
-bindsym $mod+mod2+KP_2 workspace 2
-bindsym $mod+mod2+KP_3 workspace 3
-bindsym $mod+mod2+KP_4 workspace 4
-bindsym $mod+mod2+KP_5 workspace 5
-bindsym $mod+mod2+KP_6 workspace 6
-bindsym $mod+mod2+KP_7 workspace 7
-bindsym $mod+mod2+KP_8 workspace 8
-bindsym $mod+mod2+KP_9 workspace 9
+bindsym $super+1 workspace 1
+bindsym $super+2 workspace 2
+bindsym $super+3 workspace 3
+bindsym $super+4 workspace 4
+bindsym $super+5 workspace 5
 
 # Move focused container to workspace.
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $super+Shift+1 move container to workspace 1
+bindsym $super+Shift+2 move container to workspace 2
+bindsym $super+Shift+3 move container to workspace 3
+bindsym $super+Shift+4 move container to workspace 4
+bindsym $super+Shift+5 move container to workspace 5
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
+bindsym $super+Shift+r restart
+
+# Exit i3.
+bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
 
 # Resize window (you can also use the mouse for that).
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode.
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # Same bindings, but for the arrow keys.
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # Back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Left   resize shrink width 5 px or 5 ppt
+    bindsym Down   resize grow height 5 px or 5 ppt
+    bindsym Up     resize shrink height 5 px or 5 ppt
+    bindsym Right  resize grow width 5 px or 5 ppt
+    bindsym Return mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $super+r mode "resize"
 
-# Color variables.
-set $bg-color            #000000
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-
-# Window colors.
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #ffffff
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #ffffff
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #ffffff
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #ffffff
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango: Source Code Pro Medium 11
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available).
 bar {
-    # Using custom i3 status bar config file (see <i3status.conf>).
-    status_command i3status -c ~/.config/i3/i3status.conf
+    font pango: Noto Sans, FontAwesome 11
 
-    # Set the bar font.
-    font pango: Source Code Pro 10
+    colors {
+        background #353935
+        statusline #2f343f
+        separator  #4b5262
 
-   # Setup the bar colors.
-   colors {
-          background $bg-color
-          separator #757575
-          #                  border             background         text
-          focused_workspace  $bg-color          $bg-color          $text-color
-          inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-          urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
+        # Colour of border, background, and text.
+        focused_workspace  #2f343f #000000 #d8dee8
+        active_workspace   #2f343f #2f343f #d8dee8
+        inactive_workspace #2f343f #2f343f #d8dee8
+        urgent_workspacei  #2f343f #ebcb8b #2f343f
+    }
+    status_command i3status
 }
+
+# Window rules, you can find the window class using xprop.
+for_window [class=".*"] border pixel 1
+assign [class=xfce4-terminal] 1
+assign [class=google-chrome]  2
+assign [class=evince]         3
+for_window [class=Viewnior|feh]                        floating enable
+for_window [class=xfce4-terminal|google-chrome|Evince] focus
+
+# Colour of border, background, text, indicator, and child_border.
+client.focused          #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+client.focused_inactive #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused        #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent           #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder      #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background       #2f343f

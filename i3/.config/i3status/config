@@ -2,13 +2,13 @@ general {
     output_format  = "i3bar"
     colors         = false
     markup         = pango
-    interval       = 5
+    interval       = 1
     color_good     = '#2f343f'
     color_degraded = '#ebcb8b'
     color_bad      = '#ba5e57'
 }
 
-order += "load"
+order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "disk /home"
 order += "wireless wlp1s0"
@@ -16,8 +16,10 @@ order += "volume master"
 order += "battery 1"
 order += "tztime local"
 
-load {
-    format = "<span background='#f59335'>   <b>%5min Load</b> </span>"
+cpu_usage {
+    max_threshold = 90
+    format        = "<span background='#f59335'>   <b>CPU %usage</b> </span>"
+    format_above_threshold = "<span background='#f59335'>   <b>Warning: %usage</b> </span>"
 }
 
 cpu_temperature 0 {

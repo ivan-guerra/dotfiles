@@ -39,10 +39,10 @@ bindsym $super+alt+Right exec brightnessctl set 5%-
 bindsym $super+c kill
 
 # Change focus.
-bindsym $super+Left  focus left
-bindsym $super+Down  focus down
-bindsym $super+Up    focus up
-bindsym $super+Right focus right
+bindsym $super+j focus left
+bindsym $super+k focus right
+bindsym $super+Up focus up
+bindsym $super+Down focus down
 
 # Move focused window.
 bindsym $super+Shift+Left  move left

@@ -1,2 +1,2 @@
 # Ignore those vim plugins checked out by Vundle.
-vim/.vim/*
+vim/.vim/bundle/*

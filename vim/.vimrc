@@ -89,7 +89,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set fillchars+=vert:\|
 set colorcolumn=80
-colorscheme termschool
+colorscheme jellybeans
 highlight ColorColumn ctermbg=lightgrey
 
 if &term =~ '256color'

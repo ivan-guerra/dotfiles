@@ -46,6 +46,9 @@ set tags=./tags,tags;$HOME
 " Completion.
 Plugin 'https://github.com/ervandew/supertab.git'
 
+" cscope mappings.
+Plugin 'https://github.com/joe-skb7/cscope-maps.git'
+
 " Code alignment.
 Plugin 'https://github.com/junegunn/vim-easy-align.git'
 xmap ga <Plug>(EasyAlign)

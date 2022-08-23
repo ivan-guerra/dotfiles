@@ -69,6 +69,9 @@ bindsym $super+space floating toggle
 bindsym $super+Shift+space focus mode_toggle
 
 # Switch to workspace.
+bindsym $super+Right workspace next
+bindsym $super+Left workspace prev
+
 bindsym $super+1 workspace 1
 bindsym $super+2 workspace 2
 bindsym $super+3 workspace 3

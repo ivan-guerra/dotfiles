@@ -67,6 +67,11 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
+" Code formatting.
+Plugin 'https://github.com/rhysd/vim-clang-format.git'
+let g:clang_format#detect_style_file=1
+let g:clang_format#auto_format=1
+
 call vundle#end()
 
 " Set indentation rules.

@@ -1,7 +1,10 @@
 [user]
 	name = ivan-guerra
 	email = ivan.eduardo.guerra@gmail.com
+	signingkey = 7714EAED772DC391
 [core]
 	editor = vim
 [init]
 	defaultBranch = master
+[commit]
+	gpgsign = true

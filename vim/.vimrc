@@ -97,14 +97,9 @@ set backspace=indent,eol,start
 set laststatus=2
 set fillchars+=vert:\|
 set colorcolumn=80
+set termguicolors
 colorscheme jellybeans
 highlight ColorColumn ctermbg=lightgrey
-
-if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
-    set t_ut=
-endif
 
 " Key mappings.
 nmap kk <S-:>

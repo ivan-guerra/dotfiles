@@ -60,6 +60,9 @@ Plugin 'https://github.com/rhysd/vim-clang-format.git'
 let g:clang_format#detect_style_file=1
 let g:clang_format#auto_format=1
 
+" Context sensitive bracket, paren, etc. autoclosing.
+Plugin 'https://github.com/Raimondi/delimitMate.git'
+
 call vundle#end()
 
 " Set indentation rules.
@@ -95,12 +98,6 @@ imap jj <Esc>
 nmap <C-Right> :tabnext<CR>
 nmap <C-Left> :tabprevious<CR>
 inoremap <C-Z> <C-O>u
-inoremap { {<CR><BS>}<Esc>ko
-" The following mappings allow for bracket/paren/quote auto-completion and escape.
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " Call StripTrailingWhitespaces() on file save.

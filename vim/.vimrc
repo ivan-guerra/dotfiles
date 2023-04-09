@@ -18,7 +18,7 @@ Plugin 'https://github.com/airblade/vim-gitgutter.git'
 Plugin 'https://github.com/vim-airline/vim-airline.git'
 let g:airline_powerline_fonts =1
 Plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme='angr'
+let g:airline_theme='jellybeans'
 
 " File/source tree.
 Plugin 'https://github.com/preservim/nerdtree.git'

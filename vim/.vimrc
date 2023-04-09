@@ -49,18 +49,6 @@ Plugin 'https://github.com/ervandew/supertab.git'
 " cscope mappings.
 Plugin 'https://github.com/joe-skb7/cscope-maps.git'
 
-" Code alignment.
-Plugin 'https://github.com/junegunn/vim-easy-align.git'
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-if !exists('g:easy_align_delimiters')
-    let g:easy_align_delimiters = {}
-endif
-let g:easy_align_delimiters['d'] = {
-\ 'pattern': ' \ze\S\+\s*[;=]',
-\ 'left_margin': 0, 'right_margin': 0
-\ } " The d delimiter helps us align on variable declarations (i.e., the var names line up).
-
 " Fuzzy search.
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 let g:ctrlp_map = '<c-p>'
@@ -114,17 +102,9 @@ inoremap [ []<Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-map <C-l> :call VarAlign()<CR>
 
 " Call StripTrailingWhitespaces() on file save.
 autocmd BufWritePre * :call StripTrailingWhitespaces()
-
-" Align selected first along the variable then along the '=' character.
-function VarAlign()
-    exe "normal! \e"
-    exe ":'<,'>EasyAlign d"
-    exe ":'<,'>EasyAlign ="
-endfunction
 
 function StripTrailingWhitespaces()
     let l = line(".")

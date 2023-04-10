@@ -103,6 +103,9 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 " Call StripTrailingWhitespaces() on file save.
 autocmd BufWritePre * :call StripTrailingWhitespaces()
 
+" Wrap to 80 characters within Markdown files.
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
 function StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")

@@ -27,12 +27,13 @@ MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-FontName=Source Code Pro Semi-Bold 11
+FontName=JetBrains Mono Semi-Bold 13
 RunCustomCommand=TRUE
 CustomCommand=fish
 TitleMode=TERMINAL_TITLE_REPLACE
+MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
+ColorPalette=#1c1c1c;#d770af;#9acc79;#d0d26b;#77b6c5;#a488d9;#7fcab3;#8d8d8d;#3d3a3a;#d28abf;#8fb676;#c8bc45;#8fa7b9;#bd89de;#6ec2a8;#dad3d3
 ColorCursor=#ffffff
-ColorPalette=#293b3b;#bf5357;#41a551;#aea64f;#416ea5;#bf6053;#714da5;#876868;#344040;#bf6367;#51a55f;#aea75d;#5177a5;#bf6e63;#7859a5;#876f6f
 ColorBold=#ffffff
 ColorBoldUseDefault=FALSE
 

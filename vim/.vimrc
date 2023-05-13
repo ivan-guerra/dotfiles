@@ -34,7 +34,9 @@ map <C-n> :NERDTreeToggle<CR>
 Plugin 'https://github.com/vim-syntastic/syntastic.git'
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
+let g:syntastic_cpp_config_file=".syntastic_cpp_config"
+let g:syntastic_cpp_clang_tidy_args="-checks=boost-*,clang-analyzer-*,concurrency-*,cppcoreguidelines-*,google-*,modernize-*,readability-*"
+let g:syntastic_cpp_checkers=["clang_tidy","clang_check","gcc"]
 let g:syntastic_python_checkers=['flake8']
 
 " WARNING, to use tagbar you have to install CTags on your machine!

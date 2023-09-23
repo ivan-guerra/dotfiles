@@ -3,7 +3,14 @@ local null_ls = require("null-ls")
 
 local opts = {
   sources = {
+    null_ls.builtins.formatting.autopep8,
+    null_ls.builtins.formatting.beautysh,
     null_ls.builtins.formatting.clang_format,
+    null_ls.builtins.formatting.cmake_format,
+    null_ls.builtins.formatting.latexindent,
+    null_ls.builtins.diagnostics.cmake_lint,
+    null_ls.builtins.diagnostics.cpplint,
+    null_ls.builtins.diagnostics.flake8,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

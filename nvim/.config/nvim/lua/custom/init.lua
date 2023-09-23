@@ -10,3 +10,13 @@ keymap("n", "<C-b>", ":SymbolsOutline<CR>", default_opts)
 
 -- Set the nterm shell to fish.
 vim.o.shell = "fish"
+
+-- See https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+local notify = vim.notify
+vim.notify = function(msg, ...)
+    if msg:match("warning: multiple different client offset_encodings") then
+        return
+    end
+
+    notify(msg, ...)
+end

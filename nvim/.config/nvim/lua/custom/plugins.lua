@@ -23,8 +23,21 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "clangd",
+        "autopep8",
+        "bash-language-server",
+        "beautysh",
         "clang-format",
+        "clangd",
+        "cmake-language-server",
+        "cmakelang",
+        "cpplint",
+        "dockerfile-language-server",
+        "flake8",
+        "jedi-language-server",
+        "latexindent",
+        "lua-language-server",
+        "marksman",
+        "texlab",
       }
     }
   }

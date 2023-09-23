@@ -8,3 +8,5 @@
 	defaultBranch = master
 [commit]
 	gpgsign = true
+[credential]
+	helper = store

@@ -12,7 +12,7 @@ Fedora), you can tell Stow to symlink dotfiles using the command
 For example, to link the `.bashrc` included in this repo:
 
 ```
-git clone --recursive git@github.com:ivan-guerra/dotfiles.git $HOME/.dotfiles \
-cd $HOME/.dotfiles \
+git clone --recursive git@github.com:ivan-guerra/dotfiles.git $HOME/.dotfiles
+cd $HOME/.dotfiles
 stow bash
 ```

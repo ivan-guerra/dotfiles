@@ -1,0 +1,26 @@
+# vim: filetype=muttrc
+unmailboxes *
+
+# in/out mail servers
+set realname = "Ivan Eduardo Guerra"
+set imap_pass = "`pass email/neomutt`" 
+set smtp_url = "smtps://ivan.eduardo.guerra@smtp.gmail.com"
+set smtp_pass = "`pass email/neomutt`" 
+set folder = "imaps://ivan.eduardo.guerra@gmail.com@imap.gmail.com:993"
+set spoolfile = "+INBOX"
+
+set from = "ivan.eduardo.guerra@gmail.com"
+set envelope_from
+set use_from = "yes"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+set mail_check = 6
+
+# allow Mutt to open a new IMAP connection automatically
+unset imap_passive
+
+# keep the IMAP connection alive by polling intermittently (time in seconds)
+set imap_keepalive = 300
+
+account-hook $folder "set imap_pass=\"`pass email/neomutt`\""

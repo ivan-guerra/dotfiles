@@ -17,9 +17,14 @@ cd $HOME/.dotfiles
 stow bash
 ```
 
-> **Note** 
-> In order for Neovim to install all the proper dependencies you will need to
-> preinstall the following packages: `npm`, `ripgrep`, `clang`, and `clangd`
+Some of the tools have additional dependencies. The table below lists most of
+them.
+
+| Application | Dependencies                        |
+|-------------|-------------------------------------|
+| neovim      | `npm`, `ripgrep`, `clang`, `clangd` |
+| neomutt     | `w3m`, `khard`, `evince`, `feh`     |
+
 
 [1]: https://www.gnu.org/software/stow/
 [2]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html

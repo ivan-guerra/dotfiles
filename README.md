@@ -27,7 +27,7 @@ lists dependencies grouped by application.
 | git         | `nvim`                                                                      |
 | i3          | `compton`, `dmenu`, `google-chrome`, `i3status`, `feh`, `slock`             |
 | neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                     |
-| neovim      | `clang`, `clangd`, `npm`, `ripgrep`                                         |
+| neovim      | `clang`, `clangd`, `npm`, `ripgrep`, `shellcheck`                           |
 | xinit       | `i3`                                                                        |
 
 

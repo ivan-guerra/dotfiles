@@ -20,15 +20,15 @@ stow bash
 A number of the configurations have additional dependencies. The table below
 lists dependencies grouped by application.
 
-| Application | Dependencies                                                                |
-|-------------|-----------------------------------------------------------------------------|
-| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`        |
-| fish        | `ctags`, `evince`, `dnf`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr` |
-| git         | `nvim`                                                                      |
-| i3          | `compton`, `dmenu`, `google-chrome`, `i3status`, `feh`, `slock`             |
-| neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                     |
-| neovim      | `clang`, `clangd`, `npm`, `ripgrep`, `shellcheck`                           |
-| xinit       | `i3`                                                                        |
+| Application | Dependencies                                                                  |
+|-------------|-------------------------------------------------------------------------------|
+| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`          |
+| fish        | `ctags`, `evince`, `dnf`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`   |
+| git         | `nvim`                                                                        |
+| i3          | `compton`, `dmenu`, `google-chrome`, `lm_sensors`, `i3status`, `feh`, `slock` |
+| neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                       |
+| neovim      | `clang`, `clangd`, `npm`, `ripgrep`, `shellcheck`                             |
+| xinit       | `i3`                                                                          |
 
 
 [1]: https://www.gnu.org/software/stow/

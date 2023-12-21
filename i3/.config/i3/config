@@ -24,7 +24,7 @@ bindsym $super+F6 exec systemctl suspend -i
 # Common apps keybinds.
 bindsym $super+d      exec dmenu_run
 bindsym $super+Return exec i3-sensible-terminal
-bindsym $super+z      exec slock
+bindsym $super+z      exec i3lock
 bindsym $super+b      exec google-chrome
 
 # Change volume.

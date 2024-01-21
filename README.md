@@ -27,8 +27,8 @@ lists dependencies grouped by application.
 | git         | `nvim`                                                                     |
 | i3          | `compton`, `dmenu`, `google-chrome`, `lm_sensors`, `i3status`, `feh`       |
 | neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                    |
-| neovim      | `clang`, `clangd`, `npm`, `ripgrep`, `shellcheck`                          |
-| xinit       | `i3`                                                                       |
+| neovim      | `clang`, `clangd`, `cmake`, `npm`, `ripgrep`, `shellcheck`                 |
+| xinit       | `i3`, `x11`                                                                |
 
 
 [1]: https://www.gnu.org/software/stow/

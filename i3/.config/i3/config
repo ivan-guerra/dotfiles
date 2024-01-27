@@ -102,7 +102,7 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 bar {
-    font pango: Noto Sans, FontAwesome 11
+    font pango: Berkeley Mono, FontAwesome 11
 
     colors {
         background #353935

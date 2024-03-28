@@ -11,6 +11,7 @@ local opts = {
     null_ls.builtins.diagnostics.cmake_lint,
     null_ls.builtins.diagnostics.cpplint,
     null_ls.builtins.diagnostics.flake8,
+    null_ls.builtins.diagnostics.shellcheck
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

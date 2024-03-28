@@ -37,7 +37,8 @@ local plugins = {
         "latexindent",
         "lua-language-server",
         "marksman",
-        "texlab",
+        "shellcheck",
+        "texlab"
       }
     }
   }

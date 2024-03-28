@@ -38,7 +38,8 @@ local plugins = {
         "lua-language-server",
         "marksman",
         "shellcheck",
-        "texlab"
+        "texlab",
+        "vale"
       }
     }
   }

@@ -15,6 +15,8 @@ floating_modifier $super
 exec --no-startup-id feh --bg-scale /home/ieg/pictures/sparks.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton --backend glx -cC
+exec xinput set-prop "DELL0741:00 06CB:7E7E Touchpad" \
+     "libinput Tapping Enabled" 1 
 
 # Machine state controls.
 bindsym $super+F4 exec systemctl poweroff

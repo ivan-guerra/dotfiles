@@ -23,7 +23,7 @@ cpu_usage {
 }
 
 cpu_temperature 0 {
-    format = "<span background='#bf616a'>   <b>%degrees °C</b> </span>"
+    format = "<span background='#bf616a'>  <b>%degrees °C</b> </span>"
     path   = "/sys/class/thermal/thermal_zone6/temp"
 }
 

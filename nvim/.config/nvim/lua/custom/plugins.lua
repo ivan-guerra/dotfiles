@@ -17,6 +17,15 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+      require('lspconfig').lua_ls.setup({
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = {'vim'}
+            }
+          }
+        }
+      })
     end,
   },
   {

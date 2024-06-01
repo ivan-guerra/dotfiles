@@ -25,7 +25,7 @@ lists dependencies grouped by application.
 | bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`       |
 | fish        | `ctags`, `evince`, `dnf`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`|
 | git         | `nvim`                                                                     |
-| i3          | `compton`, `dmenu`, `google-chrome`, `lm_sensors`, `i3status`, `feh`       |
+| i3          | `compton`, `dmenu`, `chromium`, `lm_sensors`, `i3status`, `feh`            |
 | neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                    |
 | neovim      | `clang`, `clangd`, `cmake`, `npm`, `ripgrep`, `shellcheck`                 |
 | xinit       | `i3`, `x11`                                                                |

@@ -1,13 +1,13 @@
 # dotfiles
 
-Dotfiles used on my Fedora development PC. The configuration files can be
-"installed" using [GNU Stow][1]. This blog post gives a nice overview of how
-GNU Stow works its magic on the dotfiles: [Using GNU Stow to manage your
+Dotfiles used on my Arch Linux development PC. The configuration files can be
+"installed" using [GNU Stow][1]. This blog post gives a nice overview of how GNU
+Stow works its magic on the dotfiles: [Using GNU Stow to manage your
 dotfiles][2].
 
 Assuming you have the `stow` program installed (`sudo dnf install stow` on
-Fedora), you can tell Stow to symlink dotfiles using the command 
-`stow $PKGNAME`.
+Fedora), you can tell Stow to symlink dotfiles using the command `stow
+$PKGNAME`.
 
 For example, to link the `.bashrc` included in this repo:
 
@@ -20,15 +20,15 @@ stow bash
 A number of the configurations have additional dependencies. The table below
 lists dependencies grouped by application.
 
-| Application | Dependencies                                                               |
-|-------------|----------------------------------------------------------------------------|
-| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`       |
-| fish        | `ctags`, `evince`, `dnf`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`|
-| git         | `nvim`                                                                     |
-| i3          | `compton`, `dmenu`, `chromium`, `lm_sensors`, `i3status`, `feh`            |
-| neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                    |
-| neovim      | `clang`, `clangd`, `cmake`, `npm`, `ripgrep`, `shellcheck`                 |
-| xinit       | `i3`, `x11`                                                                |
+| Application | Dependencies                                                                                                                                      |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`                                                                              |
+| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`                                                                                       |
+| git         | `nvim`                                                                                                                                            |
+| i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `compton`, `dmenu`, `feh`, `i3lock`, `i3status`, `lm_sensors`, `pulseaudio`, `xorg-xinput` |
+| neomutt     | `evince`, `feh`, `khard`, `pass`, `w3m`                                                                                                           |
+| neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                  |
+| xinit       | `i3`, `x11`                                                                                                                                       |
 
 
 [1]: https://www.gnu.org/software/stow/

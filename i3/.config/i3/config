@@ -27,7 +27,9 @@ bindsym $super+F6 exec systemctl suspend -i
 bindsym $super+d      exec dmenu_run
 bindsym $super+Return exec i3-sensible-terminal
 bindsym $super+z      exec i3lock
-bindsym $super+b      exec chromium
+
+# See https://stackoverflow.com/questions/67459316/enabling-chromium-to-sync-with-google-account for details on the oauth2 args.
+bindsym $super+b      exec chromium --oauth2-client-id=77185425430.apps.googleusercontent.com --oauth2-client-secret=OTJgUOQcT7lO7GsGZq2G4IlT
 
 # Change volume.
 bindsym $super+$alt+Up   exec pactl set-sink-volume 0 +5%

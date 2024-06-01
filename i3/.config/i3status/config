@@ -10,8 +10,8 @@ general {
 
 order += "cpu_usage"
 order += "cpu_temperature 0"
-order += "disk /home"
-order += "wireless wlp1s0"
+order += "disk /"
+order += "wireless wlan0"
 order += "volume master"
 order += "battery 1"
 order += "tztime local"
@@ -27,11 +27,11 @@ cpu_temperature 0 {
     path   = "/sys/class/thermal/thermal_zone6/temp"
 }
 
-disk "/home" {
+disk "/" {
     format = "<span background='#a1d569'>   <b>%free Free</b> </span>"
 }
 
-wireless wlp1s0 {
+wireless wlan0 {
     format_up   = "<span background='#b48ead'>   <b>%essid (<i>%bitrate</i>)</b> </span>"
     format_down = "<span background='#b48ead'>   <b>Disconnected</b> </span>"
 }
@@ -50,7 +50,7 @@ battery 1 {
     format_down        = "No Battery"
     status_chr         = ""
     status_bat         = ""
-    status_unk         = "Unknown"
+    status_unk         = ""
     status_full        = ""
     path               = "/sys/class/power_supply/BAT0/uevent"
     low_threshold      = 10

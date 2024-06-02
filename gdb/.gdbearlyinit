@@ -1,0 +1,8 @@
+# Tell GDB not print its startup message.
+set startup-quietly on
+
+# Disable confirmation prompts.
+set confirm off
+
+# Disable debuginfod prompt.
+set debuginfod enabled off

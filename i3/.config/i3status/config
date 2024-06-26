@@ -54,6 +54,7 @@ battery 1 {
     status_full        = ""
     path               = "/sys/class/power_supply/BAT0/uevent"
     low_threshold      = 10
+    integer_battery_capacity = true
 }
 
 tztime local {

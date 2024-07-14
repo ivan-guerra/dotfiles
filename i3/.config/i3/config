@@ -39,6 +39,10 @@ bindsym $super+$alt+Down exec pactl set-sink-volume 0 -5%
 bindsym $super+$alt+Left  exec brightnessctl set 5%-
 bindsym $super+$alt+Right exec brightnessctl set +5%
 
+# Start/stop a screen recording.
+bindsym $super+$alt+r exec ffmpeg -y -f x11grab -draw_mouse 0 -s 1920x1080 -i :0 $HOME/downloads/recording.mp4
+bindsym $super+$alt+e exec pkill ffmpeg
+
 # Kill focused window.
 bindsym $super+c kill
 

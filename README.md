@@ -20,15 +20,15 @@ stow bash
 A number of the configurations have additional dependencies. The table below
 lists dependencies grouped by application.
 
-| Application | Dependencies                                                                                                                                    |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`                                                                            |
-| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`                                                                                     |
-| git         | `nvim`                                                                                                                                          |
-| i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `dmenu`, `feh`, `i3lock`, `i3status`, `lm_sensors`, `picom`, `pulseaudio`, `xorg-xinput` |
-| neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                          |
-| neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                |
-| xinit       | `i3`, `x11`                                                                                                                                     |
+| Application | Dependencies                                                                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`                                                                                      |
+| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`                                                                                               |
+| git         | `nvim`                                                                                                                                                    |
+| i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `dmenu`, `feh`, `ffmpeg`, `i3lock`, `i3status`, `lm_sensors`, `picom`, `pulseaudio`, `xorg-xinput` |
+| neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                                    |
+| neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                          |
+| xinit       | `i3`, `x11`                                                                                                                                               |
 
 [1]: https://www.gnu.org/software/stow/
 [2]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html

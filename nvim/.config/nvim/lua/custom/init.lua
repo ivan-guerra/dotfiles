@@ -4,6 +4,14 @@ local default_opts = { noremap = true, silent = true }
 -- Toggle a code outline.
 keymap("n", "<C-b>", ":SymbolsOutline<CR>", default_opts)
 
+-- Enter a make command.
+keymap("n", "<leader>cb", ":make ", {silent = false})
+
+-- Quickfix display and navigation.
+keymap("n", "<leader>cq", ":cope<CR>", default_opts)
+keymap("n", "<leader>j", ":cn<CR>", default_opts)
+keymap("n", "<leader>k", ":cp<CR>", default_opts)
+
 -- Set the nterm shell to fish.
 vim.o.shell = "fish"
 

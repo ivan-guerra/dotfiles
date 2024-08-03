@@ -5,10 +5,10 @@ local default_opts = { noremap = true, silent = true }
 keymap("n", "<C-b>", ":SymbolsOutline<CR>", default_opts)
 
 -- Enter a make command.
-keymap("n", "<leader>cb", ":make ", {silent = false})
+keymap("n", "<leader>cb", ":Make ", {silent = false})
 
 -- Quickfix display and navigation.
-keymap("n", "<leader>cq", ":cope<CR>", default_opts)
+keymap("n", "<leader>cq", ":Copen<CR>", default_opts)
 keymap("n", "<leader>j", ":cn<CR>", default_opts)
 keymap("n", "<leader>k", ":cp<CR>", default_opts)
 

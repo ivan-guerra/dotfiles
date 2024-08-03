@@ -6,6 +6,10 @@ local plugins = {
     config = true,
   },
   {
+    "tpope/vim-dispatch",
+    lazy = false,
+  },
+  {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
     opts = function()

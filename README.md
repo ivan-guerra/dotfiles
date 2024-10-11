@@ -23,7 +23,7 @@ lists dependencies grouped by application.
 | Application | Dependencies                                                                                                                                                                |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`                                                                                                        |
-| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`                                                                                                                 |
+| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`, `rsync`                                                                                                        |
 | git         | `nvim`                                                                                                                                                                      |
 | i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `dmenu`, `feh`, `ffmpeg`, `i3lock`, `i3status`, `lm_sensors`, `picom`, `pulseaudio`, `xfce4-terminal`, `xorg-xinput` |
 | neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                                                      |

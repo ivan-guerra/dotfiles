@@ -32,8 +32,8 @@ bindsym $super+z      exec i3lock
 bindsym $super+b      exec chromium --oauth2-client-id=77185425430.apps.googleusercontent.com --oauth2-client-secret=OTJgUOQcT7lO7GsGZq2G4IlT
 
 # Change volume.
-bindsym $super+$alt+Up   exec pactl set-sink-volume 0 +5%
-bindsym $super+$alt+Down exec pactl set-sink-volume 0 -5%
+bindsym $super+$alt+Up   exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $super+$alt+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # Change brightness
 bindsym $super+$alt+Left  exec brightnessctl set 5%-

@@ -34,6 +34,7 @@ local plugins = {
     },
     opts = {
       debug = false,
+      model = "claude-3.5-sonnet",
       window = {
         layout = "float",
         relative = "cursor",

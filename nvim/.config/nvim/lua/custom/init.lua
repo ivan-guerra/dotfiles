@@ -1,9 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
--- Toggle a code outline.
-keymap("n", "<C-b>", ":SymbolsOutline<CR>", default_opts)
-
 -- Enter a make command.
 keymap("n", "<leader>cb", ":Make ", {silent = false})
 

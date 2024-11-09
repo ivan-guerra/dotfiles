@@ -10,21 +10,39 @@ local plugins = {
     config = true,
   },
   {
-    "jackMort/ChatGPT.nvim",
+    "github/copilot.vim",
     event = "VeryLazy",
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    lazy = false,
+    branch = "canary",
     dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
+      { "github/copilot.vim" },
+      { "nvim-lua/plenary.nvim" },
     },
-    config = function ()
-      require("chatgpt").setup({
-        api_key_cmd = "pass show services/programming/openai.apikey",
-        openai_param = {
-          model = "gpt-4o-mini"
-        }
-      })
-    end,
+    opts = {
+      debug = false,
+      window = {
+        layout = 'float',
+        relative = 'cursor',
+        width = 1,
+        height = 0.4,
+        row = 1
+      }
+    },
+    keys = {
+      {
+       "<leader>ccq",
+          function()
+            local input = vim.fn.input("Quick Chat: ")
+            if input ~= "" then
+              require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+            end
+          end,
+          desc = "CopilotChat - Quick chat",
+      }
+    }
   },
   {
     "tpope/vim-dispatch",

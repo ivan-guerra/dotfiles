@@ -1,30 +1,5 @@
 local plugins = {
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    keys = {
-      {
-        "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline"
-      }
-    },
-    config = true,
-  },
-  {
-    "rcarriga/nvim-notify",
-    config = function ()
-      require("notify").setup({
-        stages = "fade_in_slide_out",
-        background_color = "FloatShadow",
-        timeout = 3000,
-      })
-      vim.notify = require("notify")
-     end
-  },
-  {
-    "github/copilot.vim",
-    event = "VeryLazy",
-  },
-  {
     "CopilotC-Nvim/CopilotChat.nvim",
     lazy = false,
     branch = "canary",
@@ -57,8 +32,16 @@ local plugins = {
     }
   },
   {
-    "tpope/vim-dispatch",
-    lazy = false,
+    "github/copilot.vim",
+    event = "VeryLazy",
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local M = require("plugins.configs.cmp")
+      table.insert(M.sources, {name = "crates"})
+      return M
+    end
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -66,6 +49,18 @@ local plugins = {
     opts = function()
       return require("custom.configs.null-ls")
     end,
+  },
+  {
+    "mfussenegger/nvim-dap"
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^4",
+    ft = { "rust" },
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require "custom.configs.rustaceanvim"
+    end
   },
   {
     "neovim/nvim-lspconfig",
@@ -84,23 +79,22 @@ local plugins = {
     end,
   },
   {
+    "rcarriga/nvim-notify",
+    config = function ()
+      require("notify").setup({
+        stages = "fade_in_slide_out",
+        background_color = "FloatShadow",
+        timeout = 3000,
+      })
+      vim.notify = require("notify")
+     end
+  },
+  {
     "rust-lang/rust.vim",
     ft= "rust",
     init = function ()
       vim.g.rustfmt_autosave = 1
     end
-  },
-  {
-    "mrcjkb/rustaceanvim",
-    version = "^4",
-    ft = { "rust" },
-    dependencies = "neovim/nvim-lspconfig",
-    config = function()
-      require "custom.configs.rustaceanvim"
-    end
-  },
-  {
-    "mfussenegger/nvim-dap"
   },
   {
     "saecki/crates.nvim",
@@ -112,12 +106,18 @@ local plugins = {
     end
   },
   {
-    "hrsh7th/nvim-cmp",
-    opts = function()
-      local M = require("plugins.configs.cmp")
-      table.insert(M.sources, {name = "crates"})
-      return M
-    end
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    keys = {
+      {
+        "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline"
+      }
+    },
+    config = true,
+  },
+  {
+    "tpope/vim-dispatch",
+    lazy = false,
   },
   {
     "williamboman/mason.nvim",
@@ -145,4 +145,5 @@ local plugins = {
     }
   }
 }
+
 return plugins

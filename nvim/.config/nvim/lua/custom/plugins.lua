@@ -10,6 +10,17 @@ local plugins = {
     config = true,
   },
   {
+    "rcarriga/nvim-notify",
+    config = function ()
+      require("notify").setup({
+        stages = "fade_in_slide_out",
+        background_color = "FloatShadow",
+        timeout = 3000,
+      })
+      vim.notify = require("notify")
+     end
+  },
+  {
     "github/copilot.vim",
     event = "VeryLazy",
   },

@@ -120,6 +120,9 @@ local plugins = {
     lazy = false,
   },
   {
+    "radenling/vim-dispatch-neovim",
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {

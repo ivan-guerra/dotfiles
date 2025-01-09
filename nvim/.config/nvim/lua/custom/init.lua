@@ -1,8 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
--- Enter a make command.
-keymap("n", "<leader>cb", ":Make ", {silent = false})
+-- Run a just recipe asynchronously.
+keymap("n", "<leader>cb", ":Just ", {silent = false})
 
 -- Quickfix display and navigation.
 keymap("n", "<leader>cq", ":Copen<CR>", default_opts)
@@ -18,6 +18,16 @@ vim.cmd([[
     autocmd!
     autocmd FileType markdown setlocal textwidth=80
   augroup end
+]])
+
+-- Use vim-dispatch to run just recipes asynchronously.
+vim.cmd([[
+  function! DispatchJust(...)
+    let l:args = join(a:000, ' ')
+    execute 'Dispatch just ' . l:args
+  endfunction
+
+  command! -nargs=* Just call DispatchJust(<f-args>)
 ]])
 
 -- See https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428

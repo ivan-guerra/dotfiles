@@ -29,6 +29,7 @@ lists dependencies grouped by application.
 | neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                                                      |
 | neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                                            |
 | xinit       | `i3`, `x11`                                                                                                                                                                 |
+| tmux        | `fish`, `xclip`                                                                                                                                                             |
 
 [1]: https://www.gnu.org/software/stow/
 [2]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html

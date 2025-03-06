@@ -3,9 +3,9 @@ unmailboxes *
 
 # in/out mail servers
 set realname = "Ivan Eduardo Guerra"
-set imap_pass = "`pass email/neomutt`" 
+set imap_pass = "`pass email/neomutt/ivan.eduardo.guerra@gmail.com`"
 set smtp_url = "smtps://ivan.eduardo.guerra@smtp.gmail.com"
-set smtp_pass = "`pass email/neomutt`" 
+set smtp_pass = "`pass email/neomutt/ivan.eduardo.guerra@gmail.com`"
 set folder = "imaps://ivan.eduardo.guerra@gmail.com@imap.gmail.com:993"
 set spoolfile = "+INBOX"
 
@@ -23,4 +23,4 @@ unset imap_passive
 # keep the IMAP connection alive by polling intermittently (time in seconds)
 set imap_keepalive = 300
 
-account-hook $folder "set imap_pass=\"`pass email/neomutt`\""
+account-hook $folder "set imap_pass=\"`pass email/neomutt/ivan.eduardo.guerra@gmail.com`\""

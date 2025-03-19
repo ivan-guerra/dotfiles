@@ -11,11 +11,22 @@ local plugins = {
       debug = false,
       model = "claude-3.5-sonnet",
       window = {
-        layout = "float",
-        relative = "cursor",
-        width = 1,
-        height = 0.4,
-        row = 1
+        layout = "vertical",
+        relative = "cursor"
+      }
+    },
+    suggestions = {
+      enabled = true,
+      auto_trigger = true,
+      hide_during_complete = true,
+      debounce = 75,
+      keymap = {
+        accept = "<M-l>",
+        accept_word = true,
+        accept_line = true,
+        next = "<M-]>",
+        prev = "<M-[>",
+        dismiss = "<C-]>",
       }
     },
     keys = {

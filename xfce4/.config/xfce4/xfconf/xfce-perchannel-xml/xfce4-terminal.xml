@@ -9,7 +9,7 @@
   <property name="color-palette" type="string" value="#0c0d0e;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#b7b8b9;#737475;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#fcfdfe"/>
   <property name="run-custom-command" type="bool" value="true"/>
   <property name="custom-command" type="string" value="fish"/>
-  <property name="font-name" type="string" value="SauceCodePro Nerd Font Mono Semi-Bold 14"/>
+  <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font Semi-Bold 14"/>
   <property name="misc-always-show-tabs" type="bool" value="false"/>
   <property name="misc-bell" type="bool" value="false"/>
   <property name="misc-bell-urgent" type="bool" value="false"/>

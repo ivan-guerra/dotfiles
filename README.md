@@ -28,7 +28,6 @@ lists dependencies grouped by application.
 | i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `dmenu`, `feh`, `ffmpeg`, `i3lock`, `i3status`, `lm_sensors`, `picom`, `pulseaudio`, `xfce4-terminal`, `xorg-xinput` |
 | neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                                                      |
 | neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                                            |
-| xinit       | `i3`, `x11`                                                                                                                                                                 |
 | tmux        | `fish`, `xclip`                                                                                                                                                             |
 
 [1]: https://www.gnu.org/software/stow/

@@ -1,12 +1,12 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
-  <property name="color-foreground" type="string" value="#b7b8b9"/>
-  <property name="color-background" type="string" value="#0c0d0e"/>
-  <property name="color-cursor" type="string" value="#b7b8b9"/>
-  <property name="color-bold" type="string" value="#b7b8b9"/>
+  <property name="color-foreground" type="string" value="#ffffff"/>
+  <property name="color-background" type="string" value="#000000"/>
+  <property name="color-cursor" type="string" value="#ffffff"/>
+  <property name="color-bold" type="string" value="#ffffff"/>
   <property name="color-bold-use-default" type="bool" value="false"/>
-  <property name="color-palette" type="string" value="#0c0d0e;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#b7b8b9;#737475;#e31a1c;#31a354;#dca060;#3182bd;#756bb1;#80b1d3;#fcfdfe"/>
+  <property name="color-palette" type="string" value="#1c1c1c;#d770af;#9acc79;#d0d26b;#77b6c5;#a488d9;#7fcab3;#8d8d8d;#3d3a3a;#d28abf;#8fb676;#c8bc45;#8fa7b9;#bd89de;#6ec2a8;#dad3d3"/>
   <property name="run-custom-command" type="bool" value="true"/>
   <property name="custom-command" type="string" value="fish"/>
   <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font Semi-Bold 14"/>
@@ -41,4 +41,13 @@
   <property name="title-mode" type="string" value="TERMINAL_TITLE_REPLACE"/>
   <property name="scrolling-on-output" type="bool" value="false"/>
   <property name="scrolling-unlimited" type="bool" value="false"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="color-cursor-foreground" type="string" value=""/>
+  <property name="color-cursor-use-default" type="bool" value="true"/>
+  <property name="color-selection" type="string" value=""/>
+  <property name="color-selection-background" type="string" value=""/>
+  <property name="color-selection-use-default" type="bool" value="true"/>
+  <property name="color-bold-is-bright" type="bool" value="true"/>
+  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="tab-activity-color" type="string" value="#aa0000"/>
 </channel>

@@ -6,6 +6,15 @@ return {
 	},
 
 	{
+		"hedyhli/outline.nvim",
+		lazy = true,
+		cmd = { "Outline", "OutlineToggle" },
+		config = function()
+			require("outline").setup({})
+		end,
+	},
+
+	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		lazy = false,
 		branch = "main",

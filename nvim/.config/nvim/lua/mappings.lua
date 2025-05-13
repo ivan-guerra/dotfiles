@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 local map = vim.keymap.set
 
@@ -17,25 +17,25 @@ map("n", "<leader>k", ":cp<CR>", default_opts)
 
 -- Run formatter on command.
 map({ "n", "v" }, "<leader>mp", function()
-  local conform = require "conform"
-  conform.format {
-    lsp_fallback = true,
-    async = false,
-    timeout_ms = 500,
-  }
+	local conform = require("conform")
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 500,
+	})
 end, { desc = "format file or range (in visual mode)" })
 
 -- Copilot quick chat.
 map("n", "<leader>ccq", function()
-  local input = vim.fn.input "Quick Chat: "
-  if input ~= "" then
-    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
-  end
+	local input = vim.fn.input("Quick Chat: ")
+	if input ~= "" then
+		require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+	end
 end, { desc = "copilot quick chat" })
 
 -- Upgrade all crates in Cargo.toml.
 map("n", "<leader>rcu", function()
-  require("crates").upgrade_all_crates()
+	require("crates").upgrade_all_crates()
 end, { desc = "upgrade all crates" })
 
 -- Gitsigns navigation.
@@ -44,3 +44,6 @@ map("n", "[c", ":Gitsigns prev_hunk<CR>", { desc = "prev git hunk" })
 map("n", "<leader>ph", ":Gitsigns preview_hunk<CR>", { desc = "preview hunk" })
 map("n", "<leader>rh", ":Gitsigns reset_hunk<CR>", { desc = "reset hunk" })
 map("n", "<leader>rb", ":Gitsigns reset_buffer<CR>", { desc = "reset buffer" })
+
+-- Toggle code outlining.
+map("n", "<leader>o", ":Outline<CR>", { desc = "toggle code outline" })

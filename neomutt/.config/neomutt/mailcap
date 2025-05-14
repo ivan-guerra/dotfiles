@@ -3,7 +3,7 @@ text/html; w3m -I %{charset} -T text/html; copiousoutput;
 text/plain; nvim %s
 
 # pdf
-application/pdf; /usr/bin/apvlv %s
+application/pdf; /usr/bin/mupdf %s
 
 # images
 image/png; /usr/bin/feh %s

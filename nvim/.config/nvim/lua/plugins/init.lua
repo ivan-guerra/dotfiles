@@ -93,7 +93,6 @@ return {
 				"pyright",
 				"superhtml",
 				"texlab",
-				"vale-ls",
 				-- linters
 				"cmakelang",
 				"cmakelint",

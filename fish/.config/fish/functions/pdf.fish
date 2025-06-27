@@ -1,3 +1,3 @@
-function pdf -d "Read PDFs using the mupdf PDF reader"
-    mupdf $argv
+function pdf -d "Read PDFs using the apvlv PDF reader"
+    apvlv $argv
 end

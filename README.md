@@ -23,10 +23,10 @@ lists dependencies grouped by application.
 | Application | Dependencies                                                                                                                                                                |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | bash        | `ctags`, `evince`, `ffmpeg`, `rkhunter`, `valgrind`, `vim`, `xrandr`                                                                                                        |
-| fish        | `mupdf`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`, `rsync`                                                                                                        |
+| fish        | `apvlv`, `pacman`, `ffmpeg`, `valgrind`, `neovim`, `xrandr`, `rsync`                                                                                                        |
 | git         | `nvim`                                                                                                                                                                      |
 | i3          | `awesome-terminal-fonts`, `brightnessctl`, `chromium`, `dmenu`, `feh`, `ffmpeg`, `i3lock`, `i3status`, `lm_sensors`, `picom`, `pulseaudio`, `xfce4-terminal`, `xorg-xinput` |
-| neomutt     | `feh`, `mupdf`, `khard`, `pass`, `w3m`                                                                                                                                      |
+| neomutt     | `apvlv`, `feh`, `khard`, `pass`, `w3m`                                                                                                                                      |
 | neovim      | `clang`, `cmake`, `npm`, `ripgrep`, `shellcheck`                                                                                                                            |
 | tmux        | `fish`, `xclip`                                                                                                                                                             |
 

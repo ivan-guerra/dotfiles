@@ -25,6 +25,9 @@ map({ "n", "v" }, "<leader>mp", function()
 	})
 end, { desc = "format file or range (in visual mode)" })
 
+-- Toggle Copilot chat.
+map("n", "<leader>aa", ":CopilotChatToggle<CR>", default_opts)
+
 -- Copilot quick chat.
 map("n", "<leader>ccq", function()
 	local input = vim.fn.input("Quick Chat: ")

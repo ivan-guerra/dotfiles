@@ -1,5 +1,17 @@
 return {
 	{
+		"github/copilot.vim",
+		lazy = false,
+		config = function()
+			-- Disable default tab mapping
+			vim.g.copilot_no_tab_map = true
+
+			-- Map CTRL+A to accept copilot suggestion
+			vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+		end,
+	},
+
+	{
 		"stevearc/conform.nvim",
 		event = "BufWritePre",
 		opts = require("configs.conform"),

@@ -5,6 +5,11 @@ local options = {
 		layout = "vertical",
 		relative = "cursor",
 	},
+	mappings = {
+		show_diff = {
+			normal = "sd",
+		},
+	},
 }
 
 return options

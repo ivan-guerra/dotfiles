@@ -25,7 +25,7 @@ bindsym $super+F6 exec systemctl suspend -i
 
 # Common apps keybinds.
 bindsym $super+d      exec dmenu_run
-bindsym $super+Return exec i3-sensible-terminal
+bindsym $super+Return exec alacritty
 bindsym $super+z      exec i3lock
 
 # See https://stackoverflow.com/questions/67459316/enabling-chromium-to-sync-with-google-account for details on the oauth2 args.

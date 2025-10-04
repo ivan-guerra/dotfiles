@@ -128,11 +128,8 @@ bar {
 
 # Window rules, you can find the window class using xprop.
 for_window [class=".*"] border pixel 1
-assign [class=alacritty] 1
-assign [class=google-chrome]  2
-assign [class=evince]         3
-for_window [class=Viewnior|feh]                        floating enable
-for_window [class=xfce4-terminal|google-chrome|Evince] focus
+for_window [class=feh] floating enable
+for_window [class=Alacritty] focus
 
 # Colour of border, background, text, indicator, and child_border.
 client.focused          #bf616a #2f343f #d8dee8 #bf616a #d8dee8

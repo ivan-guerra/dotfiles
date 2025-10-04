@@ -18,7 +18,7 @@ style = "Italic"
 
 [font.normal]
 family = "Berkeley Mono"
-style = "Bold"
+style = "SemiBold"
 
 # (Github Dark Tritanopia) Colors for Alacritty
 

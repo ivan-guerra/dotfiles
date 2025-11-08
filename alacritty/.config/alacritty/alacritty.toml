@@ -3,6 +3,7 @@ size = 14.0
 
 [terminal.shell]
 program = "/usr/bin/fish"
+args = ["-c", "tmux"]
 
 [font.bold]
 family = "Berkeley Mono"

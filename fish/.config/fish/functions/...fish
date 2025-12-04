@@ -1,3 +1,3 @@
-function .. -d "cd .. (x1)"
+function .. -d "alias: cd .."
     cd ../
 end

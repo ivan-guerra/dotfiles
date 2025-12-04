@@ -2,7 +2,7 @@
 size = 14.0
 
 [terminal.shell]
-program = "fish"
+program = "/bin/fish"
 args = ["-c", "tmux"]
 
 [font.bold]

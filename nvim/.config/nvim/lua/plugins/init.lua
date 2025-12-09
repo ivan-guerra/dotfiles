@@ -91,42 +91,6 @@ return {
 	},
 
 	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				-- language servers
-				"bash-language-server",
-				"clangd",
-				"cmake-language-server",
-				"dockerfile-language-server",
-				"json-lsp",
-				"lua-language-server",
-				"marksman",
-				"pyright",
-				"superhtml",
-				"texlab",
-				-- linters
-				"cmakelang",
-				"cmakelint",
-				"cpplint",
-				"flake8",
-				"hadolint",
-				"htmlhint",
-				"jsonlint",
-				"shellcheck",
-				"stylelint",
-				"vale",
-				-- formatters
-				"autopep8",
-				"beautysh",
-				"clang-format",
-				"prettier",
-				"prettierd",
-			},
-		},
-	},
-
-	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
 			ensure_installed = {

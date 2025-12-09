@@ -1,7 +1,0 @@
-set confirm off
-set debuginfod enabled off
-
-# Avoid stepping into the std library.
-skip -gfi /usr/include/c++/*/*/*
-skip -gfi /usr/include/c++/*/*
-skip -gfi /usr/include/c++/*

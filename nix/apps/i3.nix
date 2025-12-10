@@ -112,6 +112,36 @@
           };
 
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-default.toml";
+
+          colors = {
+            background = "#1C1B19";
+            statusline = "#2f343f";
+            separator = "#4b5262";
+            
+            focusedWorkspace = {
+              border = "#2f343f";
+              background = "#000000";
+              text = "#d8dee8";
+            };
+            
+            activeWorkspace = {
+              border = "#2f343f";
+              background = "#2f343f";
+              text = "#d8dee8";
+            };
+            
+            inactiveWorkspace = {
+              border = "#2f343f";
+              background = "#2f343f";
+              text = "#d8dee8";
+            };
+            
+            urgentWorkspace = {
+              border = "#2f343f";
+              background = "#ebcb8b";
+              text = "#2f343f";
+            };
+          };
         }
       ];
       
@@ -172,15 +202,6 @@
     };
   };
   
-  home.packages = with pkgs; [
-    brightnessctl
-    dmenu
-    feh
-    font-awesome
-    ffmpeg
-    i3lock
-  ];
-
   services.picom = {
     enable = false; # TODO: enable on hardware with GPU
     backend = "glx";

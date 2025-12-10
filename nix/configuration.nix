@@ -85,8 +85,14 @@
   # Enable X and set i3 as WM
   services.xserver = {
     enable = true;
-    displayManager.lightdm.enable = true;
+    exportConfiguration = true;
     windowManager.i3.enable = true;
+
+    displayManager =  {
+      lightdm.enable = true;
+      lightdm.greeters.gtk.enable = false;
+      lightdm.greeters.slick.enable = true;
+    };
   };
   services.displayManager = {
     defaultSession = "none+i3";

@@ -39,9 +39,9 @@
       dev = "cd $HOME/dev";
       ddir = "cd $HOME/downloads";
       nrs = "sudo nixos-rebuild switch";
-      xcopy = "xclip -r -selection clipboard";
-      setmon = "xrandr --output HDMI-1 --primary --auto --right-of eDP-1 --output eDP-1 --off";
-      resetmon = "xrandr --auto";
+      xcopy = "${pkgs.xclip}/bin/xclip -r -selection clipboard";
+      setmon = "${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-1 --primary --auto --right-of eDP-1 --output eDP-1 --off";
+      resetmon = "${pkgs.xorg.xrandr}/bin/xrandr --auto";
     };
-  };
+ };
 }

@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     bat
+    bolt-launcher
     bluez
     bluez-tools
     chromium
@@ -17,11 +18,10 @@
     fd
     feh
     ffmpeg
-    htop
     file
     font-awesome
-    freerdp
     gnumake
+    htop
     hugo
     imagemagick
     maim
@@ -30,19 +30,18 @@
     nerd-fonts.symbols-only
     ninja
     nodejs_24
-    pass
     pamixer
+    pass
     pavucontrol
     python312
+    qemu_kvm
+    qemu-utils
     remmina
     ripgrep
     rustup
-    stow
-    tigervnc
     tree
     unzip
     uv
-    xclip
   ];
 
   fonts.fontconfig.enable = true;
@@ -57,7 +56,14 @@
     ./apps/neovim.nix
     ./apps/tmux.nix
     ./apps/wallpapers.nix
+
     ./fonts/berkeley-mono.nix
+
+    ./systemd/vnc-server.nix
+    ./systemd/osrs-colorbot.nix
+    ./systemd/osrs-colorbot.timer.nix
+    ./systemd/osrs-reset-client.nix
+    ./systemd/osrs-reset-client.timer.nix
   ];
 }
 

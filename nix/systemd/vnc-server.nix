@@ -23,7 +23,9 @@
         
         mkdir -p ~/.vnc
         
-        ${pkgs.xorg.xorgserver}/bin/Xvfb :1 -screen 0 1920x1080x24 &
+        # The dimensions were tuned so that they would work well with the OSRS
+        # color bot which is the main program which runs in the virt display.
+        ${pkgs.xorg.xorgserver}/bin/Xvfb :1 -screen 0 1918x1053x24 &
         echo $!  > ~/.vnc/Xvfb.pid
         sleep 3
         
@@ -31,7 +33,7 @@
         echo $! > ~/.vnc/i3.pid
         sleep 2
         
-        exec ${pkgs.x11vnc}/bin/x11vnc -display :1 -rfbport 5901 -forever -shared -noxdamage -listen localhost
+        exec ${pkgs.x11vnc}/bin/x11vnc -display :1 -rfbport 5901 -forever -shared -noxdamage -listen localhost -cursor arrow -nocursorshape
       ''}";
       
       ExecStop = "${pkgs.writeShellScript "vnc-stop" ''

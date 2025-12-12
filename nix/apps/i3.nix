@@ -203,7 +203,7 @@
   };
   
   services.picom = {
-    enable = false; # TODO: enable on hardware with GPU
+    enable = true;
     backend = "glx";
     vSync = true;
     shadow = true;

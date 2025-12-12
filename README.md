@@ -18,7 +18,7 @@ sudo nix-channel --update
 - [ ] Generate new GitHub SSH key.
 - [ ] Install private pass database.
 - [ ] Need to run `fisher install realiserad/fish-ai` and setup INI config (place
-      under `~/.config/fish/fish-ai.ini`):
+      under `~/.config/fish-ai.ini`):
 
 ```ini
 [fish-ai]

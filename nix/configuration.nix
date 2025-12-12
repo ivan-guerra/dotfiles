@@ -44,9 +44,9 @@
     isNormalUser = true;
     description = "Ivan Eduardo Guerra";
     extraGroups = [ "networkmanager" "wheel" "docker" "audio" ];
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     openssh.authorizedKeys.keys = [
-      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCOei7xvSTFFzzJvb78OvCiqOxujcuM0Dc1yZQIVP0aKPwJvyZMDPg6ZCZcpgqmqcsS58wpZSIps9PxRNLb9b1oEV4QstytrOIZ7hdIbCDnAxL0tv3rhX1rTtKRvx0wOYUyVCcgJFB3IwAD6tNKEdIF2pKVBuq2YatyS1o/3/PFlFcV0Oa8j7NDDhHLwYWKEy9JqbAoQjQvKhKHARqBFlAq560Ulo8q8+guv6FyoltpfNnSkHxQp/5ljgAGySfsVebuFiOAIi2TNambLQSrvpxS1uVRXA2TrfMsf1G06be7I+nTaFi39VAUQDAh5q6x1iOpaA1g0AgPmH6qNKj9mLTYoZ+tRaRUf/5/RIR2bqqe9K/zGDWnD2Kk3hmChnjEVhg/4TWtcN4jufN1smvzR+8MPQ6Nsv1/U4aKRhVXszb9MvvX3rCbefufC+l+c9GfMZNHYlt9EamJHOj+3amvqmaJiaVTas9n/NkojFTowFa12wX3B2GIRyokNElkdlM06S8= ieg@prim"
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyohbRInRq/Q0TVhKCgOpthC6sg7ji57aRVWGjQELYeNVBDSVE+oHbbLUH7/KXrKoCnWsjf7it78TrvkK+bHLW+QAKVs22ofT+wjXzGPIqzyQIFK/70LOcpgsC+T/3HlMyjwJgrtwvQF06thpB61cS9dSklC/NSQYATTVfumAPE32mcnYBG03PKilkubm+4CrF3Sti7DXF76RWf2K1Unckexk4el/pS2WkUvEQmCY4R/+ym3SB53rIpDAyiXoYLdChdiB45NRd61EIDvTDHvUgoMVmppbi5c728z/Rdo8tnDVC4/umHnMeH1zDHseVO8GMLDvs/Z+UiwjGKc4T/Qnb prim"
     ];
   };
 
@@ -72,9 +72,6 @@
     enableSSHSupport = true;
     pinentryPackage = pkgs.pinentry-curses; 
   };
-
-  # Enable fish system-wide
-  programs.fish.enable = true;
 
   # Enable nm-cli for network conn management
   programs.nm-applet.enable = true;

@@ -14,22 +14,22 @@
         size = 14.0;
         
         normal = {
-          family = "Berkeley Mono";
+          family = "BerkeleyMono Nerd Font";
           style = "SemiBold";
         };
         
         bold = {
-          family = "Berkeley Mono";
+          family = "BerkeleyMono Nerd Font";
           style = "Bold";
         };
         
         italic = {
-          family = "Berkeley Mono";
+          family = "BerkeleyMono Nerd Font";
           style = "SemiBold Oblique";
         };
         
         bold_italic = {
-          family = "Berkeley Mono";
+          family = "BerkeleyMono Nerd Font";
           style = "Bold Oblique";
         };
       };

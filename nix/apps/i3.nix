@@ -8,7 +8,7 @@
       modifier = "Mod4";
       
       fonts = {
-        names = [ "Berkeley Mono"];
+        names = [ "BerkeleyMono Nerd Font"];
         size = 11.0;
       };
       
@@ -107,7 +107,7 @@
       bars = [
         {
           fonts = {
-            names = [ "Berkeley Mono" "FontAwesome" ];
+            names = [ "BerkeleyMono Nerd Font" "FontAwesome" ];
             size = 11.0;
           };
 

@@ -9,7 +9,7 @@ let
       owner = "ivan-guerra";
       repo = "dotfiles";
       rev = "nixos";
-      sha256 = "sha256-SEOKRXv8NnyT+kXwnd7Y53Hsek27+gkTcvn7QFUfEno=";
+      sha256 = "sha256-3v8Kfc5NowYHzi4OryuBK6uwuvhdnt6P4WRPGjncOb8=";
     };
     
     installPhase = ''

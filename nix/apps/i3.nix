@@ -28,8 +28,7 @@
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
         "${mod}+z" = "exec ${pkgs.i3lock}/bin/i3lock";
-        # See https://stackoverflow.com/questions/67459316/enabling-chromium-to-sync-with-google-account for details on the oauth2 args.
-        "${mod}+b" = "exec ${pkgs.chromium}/bin/chromium --oauth2-client-id=77185425430. apps.googleusercontent.com --oauth2-client-secret=OTJgUOQcT7lO7GsGZq2G4IlT";
+        "${mod}+b" = "exec ${pkgs.chromium}/bin/chromium";
         
         # Change volume
         "${mod}+${alt}+Up" = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";

@@ -140,6 +140,21 @@
         ];
       }
    ];
+  
+  # Performance and Power
+  services.thermald.enable = true;
+
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+       governor = "powersave";
+       turbo = "never";
+    };
+    charger = {
+       governor = "performance";
+       turbo = "auto";
+    };
+  };
 
   # Enable nix-ld to run dynamic executables
   # This is currently enabled to allow the installation of the fish-ai plugin which

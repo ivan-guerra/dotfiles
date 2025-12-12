@@ -42,6 +42,10 @@
     tree
     unzip
     uv
+    xdotool
+    xorg.xwininfo
+
+    (import ./apps/colorbot.nix { inherit pkgs; })
   ];
 
   fonts.fontconfig.enable = true;

@@ -30,12 +30,18 @@
       set -x EDITOR nvim
       set -x VISUAL nvim
     '';
+
+    shellInit = ''
+      set -gx GPG_TTY (tty)
+    '';
     
     shellAliases = {
       l = "ls --color=auto -lah";
       ".." = "cd ..";
       ".2" = "cd ../..";
       ".3" = "cd ../../..";
+      vi = "${pkgs.neovim}/bin/nvim";
+      vim = "${pkgs.neovim}/bin/nvim";
       dev = "cd $HOME/dev";
       ddir = "cd $HOME/downloads";
       nrs = "sudo nixos-rebuild switch";

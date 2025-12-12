@@ -32,16 +32,16 @@
           
           {
             block = "net";
-            device = "wlan0";
+            device = "wlp1s0";
             interval = 5;
-            format = " $icon {$signal_strength $ssid $frequency|Disconnected} ";
+            format = " $icon {$ssid} ";
             format_alt = " $icon {$signal_strength $ssid $frequency $bitrate|Disconnected} ";
           }
           
           {
             block = "sound";
             driver = "auto";
-            format = " $icon $output_name {$volume|Muted} ";
+            format = " $icon {$volume|Muted} ";
             max_vol = 100;
             step_width = 5;
           }

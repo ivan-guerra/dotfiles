@@ -1,5 +1,13 @@
 { config, pkgs, lib, ...  }:
 
+let
+  dotfiles = pkgs.fetchFromGitHub {
+    owner = "ivan-guerra";
+    repo = "dotfiles";
+    rev = "nixos";
+    sha256 = "sha256-cxEUREVXWyth5ZzMF9OI6vAg7hQZXZFCIwECO5SFxzo=";
+  };
+in
 {
   programs.fish = {
     enable = true;
@@ -88,4 +96,6 @@
       echo -n "$suffix "
       '';
     };
+
+    xdg.configFile."fish/completions/pass.fish".source = "${dotfiles}/fish/completions/pass.fish";
 }

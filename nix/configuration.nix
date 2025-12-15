@@ -11,6 +11,13 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
 
+  # Disable sleep and hibernate targets. This allows us to use our KVM switch
+  # without the PC entering a sleep state.
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
+
   # Enable networking.
   networking.hostName = "prim";
   networking.networkmanager.enable = true;

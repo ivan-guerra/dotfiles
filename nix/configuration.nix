@@ -8,8 +8,8 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Disable sleep and hibernate targets. This allows us to use our KVM switch
   # without the PC entering a sleep state.

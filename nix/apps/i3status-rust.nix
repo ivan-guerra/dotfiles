@@ -17,7 +17,7 @@
           {
             block = "temperature";
             interval = 1;
-            chip = "*-isa-*";
+            chip = "k10temp-pci-*";
             format = " $icon $max ";
           }
           
@@ -32,7 +32,7 @@
           
           {
             block = "net";
-            device = "wlp1s0";
+            device = "wlp3s0";
             interval = 5;
             format = " $icon {$ssid} ";
             format_alt = " $icon {$signal_strength $ssid $frequency $bitrate|Disconnected} ";
@@ -44,15 +44,6 @@
             format = " $icon {$volume|Muted} ";
             max_vol = 100;
             step_width = 5;
-          }
-          
-          {
-            block = "battery";
-            interval = 10;
-            format = " $icon $percentage {$time|} ";
-            device = "BAT0";
-            full_format = " $icon $percentage ";
-            missing_format = "";
           }
           
           {

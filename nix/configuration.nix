@@ -70,7 +70,16 @@
   environment.systemPackages = with pkgs; [
     git
     vim
+    man-pages
+    man-pages-posix
   ];
+
+  # Enable all manpages.
+  documentation.enable = true;
+  documentation.man.enable = true;
+  documentation.dev.enable = true;
+  documentation.man.generateCaches = true;
+  documentation.man.man-db.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

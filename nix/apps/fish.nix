@@ -37,6 +37,8 @@ in
       # Set environment variables on login
       set -x EDITOR nvim
       set -x VISUAL nvim
+      set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -l man'"
+      set -x MANROFFOPT "-c"
     '';
 
     shellInit = ''

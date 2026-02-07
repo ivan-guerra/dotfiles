@@ -1,132 +1,141 @@
 return {
-	{
-		"github/copilot.vim",
-		lazy = false,
-		config = function()
-			-- Disable default tab mapping
-			vim.g.copilot_no_tab_map = true
+  {
+    "github/copilot.vim",
+    lazy = false,
+    config = function()
+      -- Disable default tab mapping
+      vim.g.copilot_no_tab_map = true
 
-			-- Map CTRL+A to accept copilot suggestion
-			vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-		end,
-	},
+      -- Map CTRL+A to accept copilot suggestion
+      vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+    end,
+  },
 
-	{
-		"stevearc/conform.nvim",
-		event = "BufWritePre",
-		opts = require("configs.conform"),
-	},
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    opts = require("configs.conform"),
+  },
 
-	{
-		"hedyhli/outline.nvim",
-		lazy = true,
-		cmd = { "Outline", "OutlineToggle" },
-		config = function()
-			require("outline").setup({})
-		end,
-	},
+  {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineToggle" },
+    config = function()
+      require("outline").setup({})
+    end,
+  },
 
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		lazy = false,
-		branch = "main",
-		dependencies = {
-			{ "github/copilot.vim" },
-			{ "nvim-lua/plenary.nvim" },
-		},
-		opts = require("configs.copilotchat"),
-	},
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    lazy = false,
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("telescope").load_extension("ui-select")
+    end,
+  },
 
-	{
-		"radenling/vim-dispatch-neovim",
-		dependencies = "tpope/vim-dispatch",
-		lazy = false,
-	},
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    lazy = false,
+    branch = "main",
+    dependencies = {
+      { "github/copilot.vim" },
+      { "nvim-lua/plenary.nvim" },
+    },
+    opts = require("configs.copilotchat"),
+  },
 
-	{
-		"rust-lang/rust.vim",
-		ft = "rust",
-		init = function()
-			vim.g.rustfmt_autosave = 1
-		end,
-	},
+  {
+    "radenling/vim-dispatch-neovim",
+    dependencies = "tpope/vim-dispatch",
+    lazy = false,
+  },
 
-	{
-		"mrcjkb/rustaceanvim",
-		version = "^5",
-		lazy = false,
-		ft = { "rust" },
-		dependencies = "neovim/nvim-lspconfig",
-		config = function()
-			require("configs.rustaceanvim")
-		end,
-	},
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
 
-	{
-		"saecki/crates.nvim",
-		ft = { "rust", "toml" },
-		config = function(_, opts)
-			local crates = require("crates")
-			crates.setup(opts)
-			crates.show()
-		end,
-	},
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5",
+    lazy = false,
+    ft = { "rust" },
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require("configs.rustaceanvim")
+    end,
+  },
 
-	{
-		"mfussenegger/nvim-lint",
-		event = {
-			"BufReadPre",
-			"BufNewFile",
-		},
-		config = function()
-			require("configs.nvim-lint")
-		end,
-	},
+  {
+    "saecki/crates.nvim",
+    ft = { "rust", "toml" },
+    config = function(_, opts)
+      local crates = require("crates")
+      crates.setup(opts)
+      crates.show()
+    end,
+  },
 
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("configs.lspconfig")
-		end,
-	},
+  {
+    "mfussenegger/nvim-lint",
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
+    config = function()
+      require("configs.nvim-lint")
+    end,
+  },
 
-	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = {
-				"vim",
-				"lua",
-				"vimdoc",
-				"html",
-				"css",
-				"rust",
-				"cpp",
-				"python",
-				"bash",
-				"markdown",
-				"dockerfile",
-				"cmake",
-				"devicetree",
-				"doxygen",
-				"gitcommit",
-				"gitattributes",
-				"gitignore",
-				"git_rebase",
-				"git_config",
-				"json",
-				"kconfig",
-				"just",
-				"muttrc",
-				"superhtml",
-				"tmux",
-				"xml",
-				"yaml",
-				"toml",
-				"rst",
-				"make",
-				"fish",
-				"diff",
-			},
-		},
-	},
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("configs.lspconfig")
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "rust",
+        "cpp",
+        "python",
+        "bash",
+        "markdown",
+        "dockerfile",
+        "cmake",
+        "devicetree",
+        "doxygen",
+        "gitcommit",
+        "gitattributes",
+        "gitignore",
+        "git_rebase",
+        "git_config",
+        "json",
+        "kconfig",
+        "just",
+        "muttrc",
+        "superhtml",
+        "tmux",
+        "xml",
+        "yaml",
+        "toml",
+        "rst",
+        "make",
+        "fish",
+        "diff",
+      },
+    },
+  },
 }

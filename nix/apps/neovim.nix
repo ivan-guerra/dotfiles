@@ -34,5 +34,10 @@
     python312Packages.autopep8
     beautysh
     prettier
+
+    # Tools CopilotChat can direct LLMs to use
+    bash
+    edit
+    patchutils_0_4_2
   ];
 }

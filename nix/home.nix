@@ -7,7 +7,6 @@
 
   home.packages = with pkgs; [
     bat
-    bolt-launcher
     bluez
     bluez-tools
     chromium
@@ -42,10 +41,7 @@
     tree
     unzip
     uv
-    xdotool
     xorg.xwininfo
-
-    (import ./apps/colorbot.nix { inherit pkgs; })
   ];
 
   fonts.fontconfig.enable = true;
@@ -62,12 +58,6 @@
     ./apps/wallpapers.nix
 
     ./fonts/berkeley-mono.nix
-
-    ./systemd/vnc-server.nix
-    ./systemd/osrs-colorbot.nix
-    ./systemd/osrs-colorbot.timer.nix
-    ./systemd/osrs-reset-client.nix
-    ./systemd/osrs-reset-client.timer.nix
   ];
 }
 

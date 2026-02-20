@@ -22,6 +22,7 @@
     # Linters 
     cmake-lint
     cpplint
+    eslint
     python312Packages.flake8
     hadolint
     htmlhint

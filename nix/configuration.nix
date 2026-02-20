@@ -92,6 +92,10 @@
   # Enable nm-cli for network conn management
   programs.nm-applet.enable = true;
 
+  # Enable Steam and graphics drivers for gaming
+  programs.steam.enable = true;
+  hardware.graphics.enable = true;
+
   # Enable Docker
   virtualisation.docker.enable = true;
 

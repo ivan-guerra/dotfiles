@@ -24,6 +24,7 @@
     hugo
     imagemagick
     maim
+    mesa
     ncdu
     neofetch
     nerd-fonts.symbols-only
@@ -38,6 +39,7 @@
     remmina
     ripgrep
     rustup
+    steam
     tree
     unzip
     uv

@@ -9,6 +9,7 @@
     bat
     bluez
     bluez-tools
+    bolt-launcher
     chromium
     clang
     cmake
@@ -24,7 +25,6 @@
     hugo
     imagemagick
     maim
-    mesa
     ncdu
     neofetch
     nerd-fonts.symbols-only
@@ -39,10 +39,10 @@
     remmina
     ripgrep
     rustup
-    steam
     tree
     unzip
     uv
+    xdotool
     xorg.xwininfo
   ];
 
@@ -60,6 +60,12 @@
     ./apps/wallpapers.nix
 
     ./fonts/berkeley-mono.nix
+
+    ./systemd/vnc-server.nix
+    ./systemd/osrs-colorbot.nix
+    ./systemd/osrs-colorbot.timer.nix
+    ./systemd/osrs-reset-client.nix
+    ./systemd/osrs-reset-client.timer.nix
   ];
 }
 

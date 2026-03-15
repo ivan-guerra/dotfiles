@@ -64,8 +64,8 @@
     ./systemd/vnc-server.nix
     ./systemd/osrs-colorbot.nix
     ./systemd/osrs-colorbot.timer.nix
-    ./systemd/osrs-reset-client.nix
-    ./systemd/osrs-reset-client.timer.nix
+    ./systemd/osrs-setup-client.nix
+    ./systemd/osrs-setup-client.timer.nix
   ];
 }
 

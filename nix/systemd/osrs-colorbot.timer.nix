@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  systemd.user.timers."osrs-colorbot@" = {
+  systemd.user.timers.osrs-colorbot = {
     Unit = {
       Description = "Run OSRS colorbot at 7AM daily (8:15AM on Wednesdays)";
     };

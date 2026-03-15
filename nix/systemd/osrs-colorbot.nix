@@ -1,16 +1,16 @@
 { config, pkgs, ... }:
 
 {
-  systemd.user.services."osrs-colorbot@" = {
+  systemd.user.services.osrs-colorbot = {
     Unit = {
-      Description = "Launch Old School RuneScape Colorbot on display %i";
-      After = [ "vnc-server@%i.service" ];
-      Requires = [ "vnc-server@%i.service" ];
+      Description = "Launch Old School RuneScape colorbot";
+      After = [ "vnc-server.service" ];
+      Requires = [ "vnc-server.service" ];
     };
     
     Service = {
       Type = "simple";
-      Environment = "DISPLAY=:%i";
+      Environment = "DISPLAY=:1";
       ExecStart = "${pkgs.bash}/bin/bash /home/ieg/dev/colorbot/bot.sh";
     };
   };

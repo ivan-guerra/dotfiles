@@ -42,7 +42,6 @@
     tree
     unzip
     uv
-    xdotool
     xorg.xwininfo
   ];
 
@@ -60,12 +59,6 @@
     ./apps/wallpapers.nix
 
     ./fonts/berkeley-mono.nix
-
-    ./systemd/vnc-server.nix
-    ./systemd/osrs-colorbot.nix
-    ./systemd/osrs-colorbot.timer.nix
-    ./systemd/osrs-reset-client.nix
-    ./systemd/osrs-reset-client.timer.nix
   ];
 }
 

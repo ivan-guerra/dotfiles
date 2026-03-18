@@ -39,6 +39,7 @@
     remmina
     ripgrep
     rustup
+    tigervnc
     tree
     unzip
     uv

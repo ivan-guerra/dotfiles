@@ -60,6 +60,8 @@
     ./apps/wallpapers.nix
 
     ./fonts/berkeley-mono.nix
+
+    ./systemd/vnc-ssh-tunnel.nix
   ];
 }
 

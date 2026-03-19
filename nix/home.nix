@@ -39,7 +39,6 @@
     remmina
     ripgrep
     rustup
-    tigervnc
     tree
     unzip
     uv
@@ -61,7 +60,7 @@
 
     ./fonts/berkeley-mono.nix
 
-    ./systemd/vnc-ssh-tunnel.nix
+    ./systemd/vnc-server.nix
   ];
 }
 

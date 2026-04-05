@@ -17,28 +17,29 @@ map("n", "<leader>k", ":cp<CR>", default_opts)
 
 -- Run formatter on command.
 map({ "n", "v" }, "<leader>mp", function()
-	local conform = require("conform")
-	conform.format({
-		lsp_fallback = true,
-		async = false,
-		timeout_ms = 500,
-	})
+  local conform = require("conform")
+  conform.format({
+    lsp_fallback = true,
+    async = false,
+    timeout_ms = 500,
+  })
 end, { desc = "format file or range (in visual mode)" })
 
 -- Toggle Copilot chat.
 map("n", "<leader>aa", ":CopilotChatToggle<CR>", default_opts)
+map("n", "<leader>gc", ":CopilotChatCommit<CR>", default_opts)
 
 -- Copilot quick chat.
 map("n", "<leader>ccq", function()
-	local input = vim.fn.input("Quick Chat: ")
-	if input ~= "" then
-		require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
-	end
+  local input = vim.fn.input("Quick Chat: ")
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
 end, { desc = "copilot quick chat" })
 
 -- Upgrade all crates in Cargo.toml.
 map("n", "<leader>rcu", function()
-	require("crates").upgrade_all_crates()
+  require("crates").upgrade_all_crates()
 end, { desc = "upgrade all crates" })
 
 -- Gitsigns navigation.

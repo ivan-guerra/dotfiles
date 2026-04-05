@@ -25,6 +25,7 @@
     hugo
     imagemagick
     maim
+    magic-wormhole
     ncdu
     neofetch
     nerd-fonts.symbols-only

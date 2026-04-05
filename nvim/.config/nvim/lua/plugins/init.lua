@@ -1,7 +1,7 @@
 return {
   {
     "github/copilot.vim",
-    lazy = false,
+    event = "VeryLazy",
     config = function()
       -- Disable default tab mapping
       vim.g.copilot_no_tab_map = true
@@ -19,7 +19,6 @@ return {
 
   {
     "hedyhli/outline.nvim",
-    lazy = true,
     cmd = { "Outline", "OutlineToggle" },
     config = function()
       require("outline").setup({})
@@ -28,7 +27,7 @@ return {
 
   {
     "nvim-telescope/telescope-ui-select.nvim",
-    lazy = false,
+    event = "VeryLazy",
     dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
       require("telescope").load_extension("ui-select")
@@ -37,7 +36,12 @@ return {
 
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    lazy = false,
+    cmd = {
+      "CopilotChat",
+      "CopilotChatOpen",
+      "CopilotChatClose",
+      "CopilotChatToggle",
+    },
     branch = "main",
     dependencies = {
       { "github/copilot.vim" },
@@ -48,8 +52,8 @@ return {
 
   {
     "radenling/vim-dispatch-neovim",
+    event = "VeryLazy",
     dependencies = "tpope/vim-dispatch",
-    lazy = false,
   },
 
   {
@@ -63,8 +67,7 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^5",
-    lazy = false,
-    ft = { "rust" },
+    ft = "rust",
     dependencies = "neovim/nvim-lspconfig",
     config = function()
       require("configs.rustaceanvim")

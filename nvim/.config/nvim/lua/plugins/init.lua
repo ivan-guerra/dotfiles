@@ -36,13 +36,8 @@ return {
 
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    cmd = {
-      "CopilotChat",
-      "CopilotChatOpen",
-      "CopilotChatClose",
-      "CopilotChatToggle",
-    },
     branch = "main",
+    event = "VeryLazy",
     dependencies = {
       { "github/copilot.vim" },
       { "nvim-lua/plenary.nvim" },

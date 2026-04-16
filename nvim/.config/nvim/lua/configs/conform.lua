@@ -11,7 +11,7 @@ local options = {
     sh = { "beautysh" },
     bash = { "beautysh" },
     cmake = { "cmake_format" },
-    python = { "autopep8" },
+    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
   },
 
   format_on_save = {

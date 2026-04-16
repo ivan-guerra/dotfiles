@@ -23,7 +23,7 @@
     cmake-lint
     cpplint
     eslint
-    python312Packages.flake8
+    ruff # py linter and formatter
     hadolint
     htmlhint
     shellcheck
@@ -32,7 +32,6 @@
 
     # Formatters
     cmake-format
-    python312Packages.autopep8
     beautysh
     prettier
 

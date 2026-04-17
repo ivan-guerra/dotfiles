@@ -10,6 +10,7 @@
     bluez
     bluez-tools
     bolt-launcher
+    btop
     chromium
     clang
     cmake
@@ -21,7 +22,6 @@
     file
     font-awesome
     gnumake
-    htop
     hugo
     imagemagick
     maim

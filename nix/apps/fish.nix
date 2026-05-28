@@ -99,7 +99,17 @@ in
 
       echo -n "$suffix "
       '';
-    };
+
+    functions.vnc = ''
+      if test (count $argv) -ne 1
+          echo "Usage: vnc <port>"
+          return 1
+      end
+      ${pkgs.tigervnc}/bin/vncviewer localhost::$argv[1] &
+      disown
+      exit
+    '';
+  };
 
     xdg.configFile."fish/completions/pass.fish".source = "${dotfiles}/fish/completions/pass.fish";
 }

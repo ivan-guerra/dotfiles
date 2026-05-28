@@ -53,7 +53,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "audio" ];
     shell = pkgs.bash;
     openssh.authorizedKeys.keys = [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyohbRInRq/Q0TVhKCgOpthC6sg7ji57aRVWGjQELYeNVBDSVE+oHbbLUH7/KXrKoCnWsjf7it78TrvkK+bHLW+QAKVs22ofT+wjXzGPIqzyQIFK/70LOcpgsC+T/3HlMyjwJgrtwvQF06thpB61cS9dSklC/NSQYATTVfumAPE32mcnYBG03PKilkubm+4CrF3Sti7DXF76RWf2K1Unckexk4el/pS2WkUvEQmCY4R/+ym3SB53rIpDAyiXoYLdChdiB45NRd61EIDvTDHvUgoMVmppbi5c728z/Rdo8tnDVC4/umHnMeH1zDHseVO8GMLDvs/Z+UiwjGKc4T/Qnb prim"
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyohbRInRq/Q0TVhKCgOpthC6sg7ji57aRVWGjQELYeNVBDSVE+oHbbLUH7/KXrKoCnWsjf7it78TrvkK+bHLW+QAKVs22ofT+wjXzGPIqzyQIFK/70LOcpgsC+T/3HlMyjwJgrtwvQF06thpB61cS9dSklC/NSQYATTVfumAPE32mcnYBG03PKilkubm+4CrF3Sti7DXF76RWf2K1Unckexk4el/pS2WkUvEQmCY4R/+ym3SB53rIpDAyiXoYLdChdiB45NRd61EIDvTDHvUgoMVmppbi5c728z/Rdo8tnDVC4/umHnMeH1zDHseVO8GMLDvs/Z+UiwjGKc4T/Qnb prim"
     ];
   };
 
@@ -119,6 +119,7 @@
   services.openssh.enable = true;
   services.openssh.ports = [ 54446 ];
   services.openssh.settings.PasswordAuthentication = false;
+  services.openssh.settings.PubkeyAuthentication = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

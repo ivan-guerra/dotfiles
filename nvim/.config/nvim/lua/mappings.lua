@@ -15,6 +15,12 @@ map("n", "<leader>cq", ":Copen<CR>", default_opts)
 map("n", "<leader>j", ":cn<CR>", default_opts)
 map("n", "<leader>k", ":cp<CR>", default_opts)
 
+-- Show LSP document symbols with Telescope.
+map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", default_opts)
+
+-- Show man pages with Telescope.
+map("n", "<leader>fm", ":Telescope man_pages<CR>", default_opts)
+
 -- Run formatter on command.
 map({ "n", "v" }, "<leader>mp", function()
   local conform = require("conform")

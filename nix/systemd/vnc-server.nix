@@ -25,7 +25,7 @@
         
         # The dimensions were tuned so that they would work well with the OSRS
         # color bot which is the main program which runs in the virt display.
-        ${pkgs.xorg.xorgserver}/bin/Xvfb :1 -screen 0 1918x1053x24 &
+        ${pkgs.xorgserver}/bin/Xvfb :1 -screen 0 1918x1053x24 &
         echo $!  > ~/.vnc/Xvfb.pid
         sleep 3
         

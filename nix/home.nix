@@ -16,6 +16,7 @@
     cmake
     diskus
     evince
+    fastfetch
     fd
     feh
     ffmpeg
@@ -27,7 +28,6 @@
     maim
     magic-wormhole
     ncdu
-    neofetch
     nerd-fonts.symbols-only
     ninja
     nodejs_24
@@ -43,7 +43,7 @@
     tree
     unzip
     uv
-    xorg.xwininfo
+    xwininfo
   ];
 
   fonts.fontconfig.enable = true;

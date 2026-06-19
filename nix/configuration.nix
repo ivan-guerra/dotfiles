@@ -78,7 +78,7 @@
   documentation.enable = true;
   documentation.man.enable = true;
   documentation.dev.enable = true;
-  documentation.man.generateCaches = true;
+  documentation.man.cache.enable = true;
   documentation.man.man-db.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are

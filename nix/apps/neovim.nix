@@ -39,5 +39,8 @@
     bash
     edit
     patchutils_0_4_2
+
+    # Additional Tools
+    tree-sitter
   ];
 }

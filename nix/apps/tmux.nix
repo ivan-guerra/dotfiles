@@ -32,6 +32,9 @@
     ];
     
     extraConfig = ''
+      # Enable focus events for better integration with terminal emulators
+      set -g focus-events on
+
       # Automatically renumber window indices
       set -g renumber-windows on
 

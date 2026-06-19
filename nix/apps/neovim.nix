@@ -34,6 +34,7 @@
     cmake-format
     beautysh
     prettier
+    stylua
 
     # Tools CopilotChat can direct LLMs to use
     bash
@@ -41,6 +42,10 @@
     patchutils_0_4_2
 
     # Additional Tools
+    lua5_1
+    lua51Packages.jsregexp
+    lua51Packages.luarocks
+    lynx
     tree-sitter
   ];
 }

@@ -12,7 +12,9 @@
     clang-tools # includes clangd + clang-format
     cmake-language-server
     dockerfile-language-server
+    jdt-language-server
     vscode-json-languageserver
+    lemminx
     lua-language-server
     marksman
     pyright
@@ -33,6 +35,7 @@
     # Formatters
     cmake-format
     beautysh
+    google-java-format
     prettier
     stylua
 

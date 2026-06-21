@@ -17,6 +17,7 @@ local servers = {
 	"cmake",
 	"dockerls",
 	"jsonls",
+	"lemminx",
 	"lua_ls",
 	"marksman",
 	"pyright",

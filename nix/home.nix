@@ -25,8 +25,10 @@
     gnumake
     hugo
     imagemagick
+    jdk11
     maim
     magic-wormhole
+    maven
     ncdu
     nerd-fonts.symbols-only
     ninja

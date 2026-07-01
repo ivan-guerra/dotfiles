@@ -14,6 +14,12 @@ local options = {
 		cmake = { "cmake_format" },
 		python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 	},
+	formatters = {
+		["google-java-format"] = {
+			-- Append --skip-sorting-imports to prevent rearranging/sorting
+			prepend_args = { "--skip-sorting-imports" },
+		},
+	},
 
 	format_on_save = {
 		timeout_ms = 500,

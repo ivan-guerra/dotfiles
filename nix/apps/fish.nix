@@ -58,7 +58,7 @@ in
       xcopy = "${pkgs.xclip}/bin/xclip -r -selection clipboard";
       setmon = "${pkgs.xrandr}/bin/xrandr --output HDMI-1 --primary --auto --right-of eDP-1 --output eDP-1 --off";
       resetmon = "${pkgs.xrandr}/bin/xrandr --auto";
-      telekrates_tunnel = "${pkgs.openssh}/bin/ssh -L 5903:localhost:5903 -p 54448 -i $HOME/.ssh/rsbot aldur07@10.0.0.119";
+      telekrates_tunnel = "${pkgs.openssh}/bin/ssh -L 5903:localhost:5903 -p 54448 -i $HOME/.ssh/rsbot aldur07@10.0.0.246";
     };
 
     functions.fish_prompt = ''

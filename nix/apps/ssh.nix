@@ -30,7 +30,7 @@
         # Have to specify aj-desktop IP since pihole DNS does not resolve it
         # for some reason.
         Hostname = "10.0.0.246";
-        User = "aldur07";
+        User = "rsbot";
         port = 54448;
         identityFile = "/home/ieg/.ssh/rsbot";
       };

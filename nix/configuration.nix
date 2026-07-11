@@ -21,7 +21,7 @@
   # Enable networking.
   networking.hostName = "prim";
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "10.0.0.247" ];
+  networking.nameservers = [ "10.0.0.247" "9.9.9.11" ];
   networking.networkmanager.dns = "none";
 
   # Time zone.

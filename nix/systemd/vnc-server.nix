@@ -33,7 +33,7 @@
         echo $! > ~/.vnc/i3.pid
         sleep 2
         
-        exec ${pkgs.x11vnc}/bin/x11vnc -display :1 -rfbport 5901 -forever -shared -noxdamage -listen localhost -cursor arrow -nocursorshape
+        exec ${pkgs.x11vnc}/bin/x11vnc -display :1 -rfbport 5901 -forever -shared -noxdamage -cursor arrow -nocursorshape
       ''}";
       
       ExecStop = "${pkgs.writeShellScript "vnc-stop" ''

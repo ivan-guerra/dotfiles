@@ -58,7 +58,8 @@ in
       xcopy = "${pkgs.xclip}/bin/xclip -r -selection clipboard";
       setmon = "${pkgs.xrandr}/bin/xrandr --output HDMI-1 --primary --auto --right-of eDP-1 --output eDP-1 --off";
       resetmon = "${pkgs.xrandr}/bin/xrandr --auto";
-      telekrates_tunnel = "${pkgs.openssh}/bin/ssh -L 5903:localhost:5903 -p 54448 -i $HOME/.ssh/rsbot rsbot@10.0.0.246";
+      antikles_vnc = "${pkgs.tigervnc}/bin/vncviewer localhost::5901 &; disown; exit";
+      telekrates_vnc = "${pkgs.tigervnc}/bin/vncviewer 10.0.0.246::5903 &; disown; exit";
     };
 
     functions.fish_prompt = ''
@@ -98,16 +99,6 @@ in
 
       echo -n "$suffix "
       '';
-
-    functions.vnc = ''
-      if test (count $argv) -ne 1
-          echo "Usage: vnc <port>"
-          return 1
-      end
-      ${pkgs.tigervnc}/bin/vncviewer localhost::$argv[1] &
-      disown
-      exit
-    '';
   };
 
     xdg.configFile."fish/completions/pass.fish".source = "${dotfiles}/fish/completions/pass.fish";

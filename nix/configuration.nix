@@ -23,6 +23,8 @@
   networking.networkmanager.enable = true;
   networking.nameservers = [ "10.0.0.247" "9.9.9.11" ];
   networking.networkmanager.dns = "none";
+  # Allow VNC connections through the firewall.
+  networking.firewall.allowedTCPPorts = [ 5901 ];
 
   # Time zone.
   time.timeZone = "America/New_York";

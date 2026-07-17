@@ -10,6 +10,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
 
   # Disable sleep and hibernate targets. This allows us to use our KVM switch
   # without the PC entering a sleep state.

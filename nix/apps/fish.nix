@@ -59,7 +59,7 @@ in
       setmon = "${pkgs.xrandr}/bin/xrandr --output HDMI-1 --primary --auto --right-of eDP-1 --output eDP-1 --off";
       resetmon = "${pkgs.xrandr}/bin/xrandr --auto";
       antikles_vnc = "${pkgs.tigervnc}/bin/vncviewer localhost::5901 &; disown; exit";
-      telekrates_vnc = "${pkgs.tigervnc}/bin/vncviewer 10.0.0.246::5903 &; disown; exit";
+      telekrates_vnc = "${pkgs.tigervnc}/bin/vncviewer aj-desktop::5903 &; disown; exit";
     };
 
     functions.fish_prompt = ''

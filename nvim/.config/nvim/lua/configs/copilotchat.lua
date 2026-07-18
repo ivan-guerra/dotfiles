@@ -1,6 +1,6 @@
 local options = {
 	context = "buffers",
-	model = "claude-sonnet-4.6",
+	model = "gpt-5.6-terra",
 	window = {
 		layout = "vertical",
 		relative = "cursor",

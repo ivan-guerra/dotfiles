@@ -15,6 +15,7 @@
     clang
     cmake
     diskus
+    dua
     evince
     fastfetch
     fd
@@ -29,7 +30,6 @@
     maim
     magic-wormhole
     maven
-    ncdu
     nerd-fonts.symbols-only
     ninja
     nodejs_24
@@ -58,6 +58,7 @@
     ./apps/i3.nix
     ./apps/i3status-rust.nix
     ./apps/neovim.nix
+    ./apps/ssh.nix
     ./apps/tmux.nix
     ./apps/wallpapers.nix
 

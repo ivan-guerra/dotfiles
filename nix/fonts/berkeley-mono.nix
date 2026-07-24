@@ -9,7 +9,7 @@ let
       owner = "ivan-guerra";
       repo = "dotfiles";
       rev = "master";
-      sha256 = "sha256-E7Et+RQ0zNDIkt7fAAK3B6TibHaLvnpy4hZtmyQ8sgE=";
+      sha256 = "sha256-xWP5758R73UmsuwgkcPVdY+tXWuhHNbCXmeDpoC89NI=";
     };
     
     installPhase = ''

@@ -8,13 +8,13 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "ivan-guerra";
       repo = "dotfiles";
-      rev = "nixos";
-      sha256 = "sha256-WqQNqoDks1qHEpvYLuVJxNZLJZvuWgsGs2iHOjIP3Fg=";
+      rev = "master";
+      sha256 = "sha256-E7Et+RQ0zNDIkt7fAAK3B6TibHaLvnpy4hZtmyQ8sgE=";
     };
     
     installPhase = ''
       mkdir -p $out/share/fonts/truetype
-      find ./fonts/TX-02-KNRV24YN -type f -name "*.ttf" -exec cp {} $out/share/fonts/truetype/ \;
+      find ./fonts/TX-02-JMQJQZQV -type f -name "*.ttf" -exec cp {} $out/share/fonts/truetype/ \;
     '';
   };
 in

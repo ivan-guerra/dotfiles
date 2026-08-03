@@ -27,9 +27,9 @@
       };
 
       "telekrates" = {
-        Hostname = "aj-desktop";
+        Hostname = "dreambot";
         User = "rsbot";
-        port = 54448;
+        port = 22;
         identityFile = "/home/ieg/.ssh/rsbot";
       };
     };

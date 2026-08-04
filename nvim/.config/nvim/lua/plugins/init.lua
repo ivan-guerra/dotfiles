@@ -53,7 +53,7 @@ return {
 
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^5",
+		version = "^9",
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
 		config = function()

@@ -20,6 +20,8 @@
     pyright
     superhtml
     texlab
+    stylua
+    tombi # also a formatter and linter for toml
 
     # Linters 
     cmake-lint
@@ -37,7 +39,6 @@
     beautysh
     google-java-format
     prettier
-    stylua
 
     # Tools CopilotChat can direct LLMs to use
     bash

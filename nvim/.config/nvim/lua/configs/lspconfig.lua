@@ -23,6 +23,7 @@ local servers = {
 	"pyright",
 	"superhtml",
 	"texlab",
+	"tombi",
 }
 
 vim.lsp.enable(servers)

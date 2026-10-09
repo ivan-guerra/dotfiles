@@ -1,10 +1,6 @@
 local options = {
 	context = "buffers",
 	trusted_tools = true,
-	sticky = {
-		"#buffer:listed",
-		"@copilot",
-	},
 	model = "gpt-5.6-terra",
 	window = {
 		layout = "vertical",
